@@ -1,0 +1,17 @@
+Función encontrarClienteConScoringMáximo(listaClientes)
+    Si la longitud de listaClientes es 1
+        Retornar listaClientes[0]  //Caso base
+
+// Dividir la lista en dos mitades
+    mitad = longitud(listaClientes) / 2
+    ladoIzquierdo = listaClientes[0..mitad-1]
+    ladoDerecho = listaClientes[mitad..longitud(listaClientes)-1]
+
+    clienteIzquierdo = encontrarClienteConScoringMáximo(ladoIzquierdo)
+    clienteDerecho = encontrarClienteConScoringMáximo(ladoDerecho)
+
+    Si clienteIzquierdo.scoring > clienteDerecho.scoring
+        Retornar clienteIzquierdo
+    Sino
+        Retornar clienteDerecho
+Fin Función
