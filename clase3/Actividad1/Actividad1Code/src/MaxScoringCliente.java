@@ -42,3 +42,8 @@ public class MaxScoringCliente {
         System.out.println("Cliente con máximo scoring: " + maxScoring.nombre + " con un scoring de " + maxScoring.scoring);
     }
 }
+
+/* La complejidad algorítmica es de tiempo lineal O(n)
+ya que el problema se divide en dos subproblemas de tamaño 𝑛/2, se resuelve cada mitad y luego se combina el resultado con una comparación de tiempo constante. 
+Por lo tanto, el algoritmo realiza un número lineal de comparaciones en función del tamaño de la lista de clientes.
+ */
