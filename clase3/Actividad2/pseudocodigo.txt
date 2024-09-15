@@ -1,0 +1,22 @@
+funcion EncontrarDosMayores(lista):
+	si el tamaño de la lista es 2:
+		si lista[0] > lista[1]>
+			retornar (lista[0], lista[1])
+		de lo contrario:
+			retornar (lista[1], lista[0])
+
+	dividir la lista en dos mitades:
+	mitad_izquierda = lista[0 : tamanio/2]
+	mitad_derecha = lista[tamanio/2 : tamanio]
+
+	(mayor_izq, segundo_mayor_izq) = EncontrarDosMayores(mitad_izquierda)
+	(mayor_der, segundo_mayor_der) = EncontrarDosMayores(mitad_derecha)
+	
+	si mayor_izq > mayor_der:
+		mayor = mayor_izq
+		segundo_mayor = maximo(segundo_mayor_izq, mayor_der)
+	de lo contrario:
+		mayor = mayor_der
+		segundo_mayor = maximo(segundo_mayor_der, mayor_izq)
+
+	retornar(mayor, segundo_mayor)
