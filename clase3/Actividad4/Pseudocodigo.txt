@@ -1,0 +1,19 @@
+Algoritmo EncontrarNMayores(A, n)
+    Entrada: 
+        A - Lista de elementos
+        n - Cantidad de elementos más grandes a encontrar
+
+    Si la longitud de A es <= n, retornar A (ya que toda la lista son los mayores)
+
+    Si no:
+        Dividir la lista A en dos mitades:
+            mitadIzquierda = A[0 ... (len(A)/2) - 1]
+            mitadDerecha = A[(len(A)/2) ... len(A) - 1]
+
+        Encontrar los n elementos más grandes en cada mitad:
+            mayoresIzquierda = EncontrarNMayores(mitadIzquierda, n)
+            mayoresDerecha = EncontrarNMayores(mitadDerecha, n)
+
+        Combinar los resultados:
+            fusionar mayoresIzquierda y mayoresDerecha, ordenando los elementos
+            retornar los primeros n elementos de la lista combinada
