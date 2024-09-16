@@ -1,0 +1,2 @@
+El algoritmo tiene un costo de dividir el problema en dos y luego fusionar los resultados. 
+Entonces, la complejidad es O(n log n).
