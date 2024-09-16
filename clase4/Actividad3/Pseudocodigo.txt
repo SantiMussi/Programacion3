@@ -1,0 +1,23 @@
+Función greedyCarga(camionCapacidad, listaObjetos)
+    Ordenar listaObjetos por valor/peso en orden descendente
+    Inicializar totalValor a 0
+    Inicializar camionLleno a 0
+    Inicializar listaObjetosCargados a lista vacía
+
+    Para cada objeto en listaObjetos hacer
+        Si el peso del objeto es menor o igual al espacio restante en el camión
+            Cargar el objeto completo
+            camionLleno += peso del objeto
+            totalValor += valor del objeto
+            Añadir el objeto completo a listaObjetosCargados
+        Sino
+            Calcular la fracción del objeto que se puede cargar
+            Cargar la fracción
+            camionLleno += fracción del peso del objeto
+            totalValor += fracción del valor del objeto
+            Añadir la fracción del objeto a listaObjetosCargados
+            Terminar
+    Fin para
+
+    Retornar listaObjetosCargados, totalValor
+Fin Función
