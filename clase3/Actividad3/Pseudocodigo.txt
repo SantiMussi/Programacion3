@@ -1,0 +1,25 @@
+Función buscarDosMaximos(listaClientes):
+    Si la longitud de listaClientes es 1:
+        Retornar [cliente1, null]
+    Si la longitud de listaClientes es 2:
+        Si cliente1.scoring > cliente2.scoring:
+            Retornar [cliente1, cliente2]
+        Si no:
+            Retornar [cliente2, cliente1]
+
+    Dividir la lista en dos partes:
+    parteIzquierda = listaClientes[0 ... mitad]
+    parteDerecha = listaClientes[mitad + 1 ... fin]
+
+    #Recursivamente encontrar los máximos en las 2 mitades
+    maximosIzquierda = buscarDosMaximos(parteIzquierda)
+    maximosDerecha = buscarDosMaximos(parteDerecha)
+
+    combinaciónMaximos = combinarMaximos(maximosIzquierda, maximosDerecha)
+
+    Retornar combinaciónMaximos
+
+Función combinarMaximos(maximosIzquierda, maximosDerecha):
+    Crear una lista con los 4 clientes [maximosIzquierda[0], maximosIzquierda[1], maximosDerecha[0], maximosDerecha[1]]
+    Ordenar esta lista por puntaje descendente
+    Retornar los dos primeros clientes de la lista
