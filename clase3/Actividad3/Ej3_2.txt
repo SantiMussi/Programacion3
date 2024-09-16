@@ -1,0 +1,2 @@
+En cada nivel de la división, se divide la lista en dos mitades,
+el algoritmo tiene tiempo constante porque solo necesita comparar 2 pares de números 
