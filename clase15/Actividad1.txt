@@ -1,0 +1,15 @@
+El problema del viajante consiste en encontrar el camino más corto que 
+permite a un viajante visitar un conjunto de n ciudades exactamente una vez cada una y regresar a la ciudad de origen.
+
+Para n = 15
+
+(15 - 1)! = 14!
+
+14!= 87.178.291.200
+
+Métodos heurísticos
+Búsqueda local
+Inserción heurística
+Heurística del vecino más cercano
+Método del árbol mínimo expandido
+Métodos metaheurísticos
