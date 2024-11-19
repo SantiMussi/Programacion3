@@ -1,0 +1,6 @@
+Clase 14 - Actividad 1
+1- En este caso el backtracking funciona buscando todas las opciones posibles para poner las reinas en el tablero (ya sea encontrando la solución o no). El código va colocando una reina en cada fila, verificando si la posición es segura con el método isSafe. Si encuentra un problema en la colocación, retrocede a la fila anterior, elimina la última reina colocada y busca otra posición válida.
+2- Cuando el algoritmo encuentra una solución, imprime le tablero resuelto y termina el programa. Si no puede colocar más reinas, retrocede hasta que ya no haya más opciones posibles e imprime que no existe solución.
+3- Cuando retrocede, el algoritmo elimina la última reina colocada y busca otra posición en la misma fila. En Python Tutor, vemos cómo las llamadas recursivas retroceden en el árbol de decisiones, actualizando el tablero dinámicamente.
+4- Para aumentar el tamaño del tablero a 8, cambiamos el valor de N a 8 en el código. El tiempo de ejecución crecerá bastante ya que el número de opciones posibles aumenta a medida que aumentes el tamaño del tablero.
+5- El método isSafe es crucial porque verifica que cada posición en el tablero sea válida para colocar una reina, asegura que no haya reinas en conflicto en la misma columna o en las diagonales superiores.
